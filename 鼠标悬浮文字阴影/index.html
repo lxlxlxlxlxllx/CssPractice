@@ -1,0 +1,76 @@
+<!--
+ * @Author: liuxiao
+ * @email: xiao.liu06@hand-china.com
+ * @Date: 2024-11-29 17:17:22
+ * @LastEditors: xiaoliu06
+ * @LastEditTime: 2024-11-30 10:37:11
+ * @Description: file contentH
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        margin: 10px auto;
+        text-align: center;
+        color: #56b1db;
+        /* animation: animate 0.5s linear infinite; */
+    }
+    h1:hover {
+            animation: animate 0.5s linear infinite;
+        }
+    @keyframes animate{
+        0%,
+        25% {
+                text-shadow: 2px 2px 2px #ff6384;
+            }
+        50% {
+            text-shadow: 2px -2px 2px #ff6384;
+        }
+        75% {
+                text-shadow: -2px 2px 2px #ff6384;
+            }
+        100% {
+                text-shadow: -2px -2px 2px #ff6384;
+            }
+    }
+</style>
+<body>
+    <h1>hello</h1>
+    <div>
+    <pre>
+        分析：文本阴影在变动，变动规律右下、右上、左下、左上。可用css动画实现。
+        
+        思路：1、利用@keyframes定义动画名称、关键帧及其对应样式。2、再在css中使用animation属性来绑定动画及其时间等等
+        
+        关键css代码：
+        h1{
+            margin: 10px auto;
+            text-align: center;
+            color: #56b1db;
+            animation: animate 0.5s linear infinite;
+        }
+
+        @keyframes animate{
+            0%,
+            25% {
+                    text-shadow: 2px 2px 2px #ff6384;
+                }
+            50% {
+                text-shadow: 2px -2px 2px #ff6384;
+            }
+            75% {
+                    text-shadow: -2px 2px 2px #ff6384;
+                }
+            100% {
+                    text-shadow: -2px -2px 2px #ff6384;
+                }
+        }
+    </pre>
+    </div>
+</body>
+</html>
