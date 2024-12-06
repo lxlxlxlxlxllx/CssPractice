@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            position: relative;
+            /* background-color: bisque; */
+
+            h1::before{
+                content: '';
+                width: 0px;
+                height: 4px;
+                background-color: red;
+                position: absolute;
+                display: inline-block;
+                bottom: 0px;
+                left: 0px;
+                transition: width 0.36s;
+            }
+            h1:hover::before{
+                width: 100%;
+            }
+            h1{
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>悬浮下滑线</h1>
+    </div>
+    <h2>用到知识</h2>
+    <pre>
+        ::before 是一个 CSS 伪元素，用于在选定元素的内容之前插入内容。它通常用于添加装饰性内容或图标，而不需要在 HTML 中添加额外的元素。
+        ::after同理
+
+        transition: 定义过渡的属性的持续时间和缓动函数。
+
+    </pre>
+</body>
+</html>
