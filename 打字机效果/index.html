@@ -1,0 +1,37 @@
+<!--
+ * @Author: liuxiao
+ * @email: xiao.liu06@hand-china.com
+ * @Date: 2024-12-06 11:44:57
+ * @LastEditors: xiaoliu06
+ * @LastEditTime: 2024-12-06 13:26:31
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .itm{
+        width: 13em;
+        white-space: nowrap;
+        border-right: 1px solid #000;
+        animation: words 5s steps(13) infinite ; /*steps() 函数来定义动画的分步效果,此处分13步进行*/
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    @keyframes words {
+        0% {
+                width: 0;
+            }
+    }
+</style>
+<body>
+    <div class="itm">
+        我们来开始打字啦！滴滴滴。
+    </div>
+</body>
+</html>

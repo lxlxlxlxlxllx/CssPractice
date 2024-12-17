@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle-breath{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgb(204, 73, 152);
+            animation: circleBre 2.4s infinite;
+        }
+
+        @keyframes circleBre{
+            0%{
+                transform: scale(0.6);
+                box-shadow: 0 0 0 0 rgba(204, 73, 152, 60%);
+            }
+            60%{
+                transform: scale(1);
+                box-shadow: 0 0 0 36px rgba(204, 73, 152, 0%);
+            }
+            100%{
+                transform: scale(0.6);
+                box-shadow: 0 0 0 0 rgba(204, 73, 152, 0%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- box-shadow: 设置元素阴影：水平偏移、垂直偏移、模糊半径、扩展半径（可选）颜色 -->
+    <div class="circle-breath"></div>
+</body>
+</html>

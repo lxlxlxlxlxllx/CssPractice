@@ -1,0 +1,122 @@
+<!--
+ * @Author: liuxiao
+ * @email: xiao.liu06@hand-china.com
+ * @Date: 2024-12-17 15:09:05
+ * @LastEditors: xiaoliu06
+ * @LastEditTime: 2024-12-17 15:50:17
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainBox{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            margin: 200px;
+            /* overflow: hidden; */
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            background-color: aquamarine;
+
+        }
+        .line{
+            position: absolute;
+        }
+
+        .line:nth-child(1){
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, orange);
+            animation: animation1 8s linear infinite
+        }
+        @keyframes animation1{
+            0%{
+                left: -100%
+            }
+            /* 动画前半段用时4s从left-100%到left100%,动画的后半段4s一直维持一个状态 */
+            50%,
+            100%{
+                left: 100%
+            }
+        }
+
+        .line:nth-child(2){
+            width: 3px;
+            height: 100%;
+            top:-100%;
+            right: 0;
+            background: linear-gradient(180deg, transparent, rgb(0, 255, 47));
+            animation: animation2 8s linear infinite;
+            animation-delay: 2s;
+        }
+
+        @keyframes animation2{
+            0% {
+                top: -100%;
+            }
+
+            50%,
+            100% {
+                top: 100%;
+            }
+        }
+        .line:nth-child(3){
+            width: 100%;
+            height: 3px;
+            bottom:0;
+            right: -100%;
+            background: linear-gradient(270deg, transparent, rgb(255, 0, 149));
+            animation: animation3 8s linear infinite;
+            animation-delay: 4s;
+        }
+        @keyframes animation3{
+            0%{
+                right: -100%
+            }
+            50%,
+            100% {
+                right: 100%;
+            }
+        }
+        .line:nth-child(4){
+            width: 3px;
+            height: 100%;
+            left: 0;
+            bottom: -100%;
+            background: linear-gradient(360deg, transparent, rgb(51, 0, 255));
+            animation: animation4 8s linear infinite;
+            animation-delay: 6s;
+        }
+        @keyframes animation4{
+            0%{
+                bottom: -100%
+            }
+            50%,
+            100%{
+                bottom: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mainBox">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <div class="box">线条环绕</div>
+    </div>
+</body>
+</html>
