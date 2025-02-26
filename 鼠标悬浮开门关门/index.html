@@ -1,0 +1,76 @@
+<!--
+ * @Author: liuxiao
+ * @email: xiao.liu06@hand-china.com
+ * @Date: 2024-12-18 14:35:41
+ * @LastEditors: xiaoliu06
+ * @LastEditTime: 2024-12-18 15:13:32
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 100px;
+            position: relative;
+            perspective: 500px;
+            display: flex;
+            border: 1px solid#ccc;
+            
+        }
+
+        .left, .right{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: antiquewhite;
+            border: 1px solid #949191;
+            transition: 1.2s;
+            z-index: 2;
+        }
+        
+        .left{
+            transform-origin: left;
+        }
+
+        .right{
+            transform-origin: right;
+        }
+
+
+        .content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+
+        .box:hover .left{
+            transform: rotateY(-120deg);
+        }
+        .box:hover .right{
+            transform: rotateY(120deg);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left">左门</div>
+        <div class="right">右门</div>
+        <div class="content">内容</div>
+    </div>
+</body>
+</html>
